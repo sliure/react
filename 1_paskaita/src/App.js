@@ -6,6 +6,7 @@ import ClassDiv from "./components/ClassDiv";
 import Greetings from "./components/Greeting";
 import Cards from "./components/Cards";
 import Avatar from "./components/Avatar";
+import Products from "./components/Products";
 
 function App() {
   return (
@@ -41,6 +42,10 @@ function App() {
         <Avatar name="Kamile" surname="Toleikyte" />
         <Avatar name="Tadas" surname="Koverkis" />
         <Avatar name="Iveta" surname="Ivetaite" />
+      </div>
+
+      <div>
+        <Products />
       </div>
     </div>
   );

@@ -66,3 +66,29 @@
   height: 25px;
   text-align: center;
 }
+
+.products {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.productCard {
+  margin: 1rem;
+  width: 20rem;
+}
+
+.productsTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.category {
+  font-size: 0.9rem;
+  color: grey;
+}
+
+.price {
+  font-weight: bold;
+}
