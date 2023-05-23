@@ -85,3 +85,4 @@ const Button = ({ title, variant }) => {
 
 export default Button;
 */
+//Galima buvo padaryti simple kur variable kaip class
