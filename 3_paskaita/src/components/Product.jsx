@@ -22,14 +22,17 @@ const Product = ({ image, title, price, description, availability, category }) =
                 <img src={image} alt='Calendar' />
             </div>
             <div className='information'>
-                <h2>{title} <FaChevronLeft /> <FaChevronRight /></h2>
+                <div className='grid'>
+                    <h2>{title}</h2>
+                    <div><FaChevronLeft /> <FaChevronRight /></div>
+                </div>
                 <h3>{price}€</h3>
                 <div className='decripcion'>
                     {description}
                 </div>
                 <div className='availabilty'>
                     <div className='stock'>
-                        <div>Availability: <span>{availability} in stock</span></div>
+                        <div><b>Availability:</b> <span>{availability} in stock</span></div>
                     </div>
                     <div className='buttons'>
                         <div className='button'>
