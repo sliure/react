@@ -9,7 +9,7 @@ const App = () => {
           "https://i.pinimg.com/564x/18/26/dc/1826dc18e0a19ee0ff11532079e7b67d.jpg"
         }
         title={"Yearcalendar 2023 in color Green"}
-        price={"10.00"}
+        price={10}
         description={
           <div>
             12 unique designs
@@ -29,7 +29,7 @@ const App = () => {
             We ship worldwide from Sweden. Get your now!
           </div>
         }
-        availability={"10"}
+        availability={10}
         category={"Calendars"}
       />
     </div>

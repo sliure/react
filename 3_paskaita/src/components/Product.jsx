@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { FaChevronRight } from "react-icons/fa"
 import { FaChevronLeft } from "react-icons/fa"
 import { IoMdSearch } from "react-icons/io"
+import Button from './Button/Button'
 
 
 const Product = ({ image, title, price, description, availability, category }) => {
@@ -21,14 +22,14 @@ const Product = ({ image, title, price, description, availability, category }) =
         <div className='box'>
             <div className='image'>
                 <div><IoMdSearch/></div>
-                <img src={image} alt='Calendar' />
+                <img src={image} alt={title} />
             </div>
             <div className='information'>
                 <div className='grid'>
                     <h2>{title}</h2>
                     <div><FaChevronLeft /> <FaChevronRight /></div>
                 </div>
-                <h3>{price}€</h3>
+                <h3>{price.toFixed(2)}€</h3>
                 <div className='decripcion'>
                     {description}
                 </div>
@@ -42,7 +43,7 @@ const Product = ({ image, title, price, description, availability, category }) =
                             <div className='transparentButton'>{number}</div>
                             <button className='transparentButton' onClick={addQuantity}>+</button>
                         </div>
-                        <button className='blueButton'>ADD TO CART</button>
+                        <Button onClick={() => alert("Added to cart")}>ADD TO CART</Button>
                     </div>
                 </div>
                 <div className='foter'>Category: {category}</div>
@@ -54,8 +55,8 @@ const Product = ({ image, title, price, description, availability, category }) =
 Product.propTypes = {
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    description: PropTypes.element.isRequired,
     availability: PropTypes.number.isRequired,
     category: PropTypes.string.isRequired
 }
