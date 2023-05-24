@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import { useState } from 'react'
 import { FaChevronRight } from "react-icons/fa"
 import { FaChevronLeft } from "react-icons/fa"
+import { IoMdSearch } from "react-icons/io"
 
 
 const Product = ({ image, title, price, description, availability, category }) => {
@@ -19,6 +20,7 @@ const Product = ({ image, title, price, description, availability, category }) =
     return (
         <div className='box'>
             <div className='image'>
+                <div><IoMdSearch/></div>
                 <img src={image} alt='Calendar' />
             </div>
             <div className='information'>
