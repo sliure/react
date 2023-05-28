@@ -1,0 +1,40 @@
+.header{
+    text-align: center;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+}
+
+.navInfo div:hover{
+    color: rgb(144, 107, 177);
+    cursor: pointer;
+}
+
+.icon:hover{
+    color: rgb(144, 107, 177);
+    cursor: pointer;
+}
+
+.navInfo{
+    display: flex;
+}
+
+.navInfo div{
+    margin-right: 25px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.descripcion{
+    padding: 10px;
+    font-size: 18.7px;
+    width:  500px;
+}

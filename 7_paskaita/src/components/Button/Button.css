@@ -1,0 +1,18 @@
+.button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.button.upload:hover {
+    color: rgb(208, 123, 156);
+}
+
+.button.download:hover {
+    color: rgb(122, 193, 166);
+}
+
+.button.pressMe:hover {
+    color: rgb(144, 107, 177);
+}
