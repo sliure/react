@@ -33,6 +33,7 @@ const Information = ({header, descripcion}) => {
 
 Information.propTypes = {
     header: PropTypes.string.isRequired,
+    descripcion: PropTypes.string.isRequired
   };
   
   export default Information;
