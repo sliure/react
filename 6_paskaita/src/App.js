@@ -1,17 +1,13 @@
-// Sukurkite šiuos komponentus:
-// Posts;
-// Post;
-// Pagrindiniame komponente (App.js), turi būti randamas <Posts/>, komponentas, kuris savyje laikys <Post/> komponentą. kuris atvaizduos duomenis (props: title ir body). <Posts/> komponentas, informaciją pasiims iš čia:
-// URI https://jsonplaceholder.typicode.com/posts
-// Būtina naudoti: useState, useEffect
-
-import Posts from "./components/Posts/Posts";
-import Photos from "./components/Photos/Photos";
+import Information from "./components/Information/Information";
+import "./App.css";
 
 const App = () => {
   return (
     <div>
-      <Photos />
+      <Information
+        header="Printerio"
+        descripcion={`You can choose from various pictures or upload your own. If you would like to order a printed picture, please contact us!`}
+      />
     </div>
   );
 };

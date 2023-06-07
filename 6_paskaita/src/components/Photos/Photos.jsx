@@ -1,36 +1,53 @@
-//Sukurkite aplikaciją kuri ištraukia duomenis iš https://jsonplaceholder.typicode.com/photos ir atvaizduoja ją Photo.jsx komponente. Photo komponentas turi turėsi imageUrl ir title parametrus
-import { useEffect, useState } from "react";
-import Photo from "../Photo/Photo";
+import { random } from '../../utilities/random';
+import { useState, useEffect } from "react";
+import "./Photos.css";
+import Button from '../Button/Button';
+import Photo from '../Photo/Photo';
 
 const Photos = () => {
-  const [photos, setPhotos] = useState([]);
-  const photosExists = photos.length > 1;
+  const [photoIds, setPhotoIds] = useState(null);
+  const [photos, setPhotos] = useState(null);
+  const [message, setMessage] = useState("Press here to choose a picture");
+  const [uploadStatus, setUploadStatus] = useState("Upload");
+  const [downloadStatus, setDownloadStatus] = useState("Download");
+
+  const generateRandomPhoto = () => {
+    const photoIds = random(0, 33);
+    setPhotoIds(photoIds);
+    setMessage("Next Picture »");
+  };
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/photos")
-      .then((resp) => resp.json())
-      .then((response) => {
-        // Kai yra atnaujinamas state, kodas rerenderinas ir nuskaitomas iš naujo
-        setPhotos(response);
-      })
-      .catch((error) => console.error(error));
-    // useEffect hooksas, be dependency array kviečiamas kiekvieną render ciklą
-    // useEffect hooksas, su tuščiu dependency array yra paleidžiamas tik vieną kartą
-  }, []);
+    if (photoIds !== null) {
+      fetch(`https://picsum.photos/v2/list?page=${photoIds}`)
+        .then((resp) => resp.json())
+        .then((response) => {
+          setPhotos(response);
+        })
+        .catch((error) => console.error(error));
+    }
+  }, [photoIds]);
 
-  console.log(photos.length > 1 ? photos[0].title : "");
+  const handleDownloadClick = () => {
+    setDownloadStatus("Downloaded ✓");
+    setMessage("Next Picture »");
+  };
+
+  const handleUploadClick = () => {
+    setUploadStatus("Uploaded ✓");
+    setMessage("Next Picture »");
+  };
 
   return (
-    <div className="posts">
-      <Photo title="Test" url="Hello world" />
-      {photosExists && (
-        <>
-          <Photo title={photos[0].title} url={photos[0].url} />
-          <Photo title={photos[1].title} url={photos[1].url} />
-        </>
-      )}
+    <div>
+      <Button variant='pressMe' onClick={generateRandomPhoto}>{message}</Button>
+      {photos && <Photo url={photos[1].download_url} title={photos[1].author} />}
+      <Button variant='upload' onClick={handleUploadClick}>{uploadStatus}</Button>
+      <Button variant='download' onClick={handleDownloadClick}>{downloadStatus}</Button>
     </div>
   );
 };
 
 export default Photos;
+
+

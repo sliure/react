@@ -1,0 +1,34 @@
+.todoos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    border: 1px solid gray;
+    padding: 20px;
+  }
+  
+  
+  .todoos-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .todoos-input {
+    border: 1px solid gray;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+  }
+  
+  .todoos-button {
+    border: 1px solid gray;
+    padding: 10px;
+    background-color: lightgray;
+    cursor: pointer;
+  }
+  

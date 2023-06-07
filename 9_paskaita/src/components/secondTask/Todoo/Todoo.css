@@ -1,0 +1,19 @@
+.todoo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid gray;
+    font-family: "Arial", sans-serif;
+  }
+  
+  .todoo-text {
+    flex: 1;
+  }
+  
+  .todoo-delete {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  

@@ -1,13 +1,11 @@
-import Information from "./components/Information/Information";
-import "./App.css";
+import Inputs from "./components/Inputs";
+import Colors from "./components/Colors/Colors";
+import Weight from "./components/Weight/Weight";
 
 const App = () => {
   return (
     <div>
-      <Information
-        header="Printerio"
-        descripcion={`You can choose from various pictures or upload your own. If you would like to order a printed picture, please contact us!`}
-      />
+      <Weight />
     </div>
   );
 };
