@@ -1,0 +1,12 @@
+.nav{
+    display: flex;
+    justify-content: center;
+}
+
+
+a {
+    margin: 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+  }
