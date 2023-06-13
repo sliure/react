@@ -1,53 +1,49 @@
-const Button = ({title, variant}) => {
-    let buttonStyles = {};
-    if(variant === "text"){
-        buttonStyles = {
-            margin: "10px",
-            borderRadius: "4px",
-            border: "none",
-            color: "blue",
-            backgroundColor: "transparent",
-            fontSize: "25px",
-            padding: "10px"
-        }
-    }
-    else if(variant === "contained"){
-        buttonStyles = {
-            margin: "10px",
-            borderRadius: "4px",
-            border: "none",
-            backgroundColor: "blue",
-            color: "white",
-            fontSize: "25px",
-            padding: "10px"
-        }
-    }
-    else if(variant === "outlined"){
-        buttonStyles = {
-            margin: "10px",
-            borderRadius: "4px",
-            border: "blue 1px solid",
-            backgroundColor: "transparent",
-            color: "blue",
-            fontSize: "25px",
-            padding: "10px"
-        }
-    }
-    else{
-        buttonStyles = {
-            display: "none"
-        }
-    }
-    return(
-        <div>
-            <button style={buttonStyles}>
-                {title}
-            </button>
-        </div>
-    )
-}
+/* eslint-disable no-lone-blocks */
+const Button = ({ title, variant }) => {
+  let buttonStyles = {};
+  if (variant === "text") {
+    buttonStyles = {
+      margin: "10px",
+      borderRadius: "4px",
+      border: "none",
+      color: "blue",
+      backgroundColor: "transparent",
+      fontSize: "25px",
+      padding: "10px",
+    };
+  } else if (variant === "contained") {
+    buttonStyles = {
+      margin: "10px",
+      borderRadius: "4px",
+      border: "none",
+      backgroundColor: "blue",
+      color: "white",
+      fontSize: "25px",
+      padding: "10px",
+    };
+  } else if (variant === "outlined") {
+    buttonStyles = {
+      margin: "10px",
+      borderRadius: "4px",
+      border: "blue 1px solid",
+      backgroundColor: "transparent",
+      color: "blue",
+      fontSize: "25px",
+      padding: "10px",
+    };
+  } else {
+    buttonStyles = {
+      display: "none",
+    };
+  }
+  return (
+    <div>
+      <button style={buttonStyles}>{title}</button>
+    </div>
+  );
+};
 
-export default Button
+export default Button;
 
 /*Paklausiau chat gpt ar imanoma sutrumpinti koda, tai cia ateiciai!
 const Button = ({ title, variant }) => {
@@ -86,3 +82,27 @@ const Button = ({ title, variant }) => {
 export default Button;
 */
 //Galima buvo padaryti simple kur variable kaip class
+
+{
+  /*
+import PropTypes from "prop-types";
+import "./Button.css";
+
+// naujesnis būdas: variant = "text"
+const Button = ({ title, variant = "text" }) => {
+  return <button className={`btn ${variant}`}>{title}</button>;
+};
+
+Button.propTypes = {
+  title: PropTypes.string.isRequired,
+  variant: PropTypes.oneOf(["text", "contained", "outlined"]),
+};
+
+// senesnis būdas
+// Button.defaultProps = {
+//   variant: "text",
+// };
+
+export default Button;
+*/
+}

@@ -1,0 +1,20 @@
+@import "../../styles/shadows.scss";
+
+.web-posts{
+    display: $cardDisplay;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: $cardDisplayJustify;
+
+    .web-post{
+        box-shadow: $cardShadow;
+        width: 1200px;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .tag{
+        color: grey;
+    }
+}
+

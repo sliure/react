@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../components/Header/Header";
 import "./Main.css";
 
@@ -14,7 +13,7 @@ const Main = () => {
         <img
           className="hero-image"
           src="https://img.freepik.com/premium-photo/purple-plant-leaves-background-dark-vintage-tropical-pattern-wallpaper-generative-ai_788189-2956.jpg?w=2000"
-          alt="image"
+          alt=""
         />
       </main>
     </div>

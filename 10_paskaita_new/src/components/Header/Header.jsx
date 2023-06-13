@@ -1,6 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
-import Main from "../../pages/Main";
-import User from "../../pages/User";
+import {  Link } from "react-router-dom";
 import "./Header.css"
 
 const Header = () => {
@@ -8,18 +6,12 @@ const Header = () => {
     <div>
       <div className="nav">
         <p>
-          <Link to="/main">Main</Link>
+          <Link to="/">Main</Link>
         </p>
         <p>
           <Link to="/users">User</Link>
         </p>
       </div>
-
-
-      <Routes>
-        <Route path="/main" element={<Main />} />
-        <Route path="/users" element={<User />} />
-      </Routes>
     </div>
   );
 };

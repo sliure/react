@@ -1,17 +1,18 @@
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 
-import React from 'react';
-class ClassButton extends React.Component{
-    render(){
-        return(
-            <button>{this.props.title}</button>
-        )
-    }
+import React from "react";
+class ClassButton extends React.Component {
+  render() {
+    return <button>{this.props.title}</button>;
+  }
 }
 
 ClassButton.propTypes = {
-    title: PropTypes.string
-}
+  title: PropTypes.string,
+};
 
+ClassButton.defaultProps = {
+  title: "Click",
+};
 
-export default ClassButton
+export default ClassButton;

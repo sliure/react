@@ -8,18 +8,19 @@ const UserId = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const response = await fetch(
+          `https://jsonplaceholder.typicode.com/users/${id}`
+        );
+        const data = await response.json();
+        setUser(data);
+      } catch (error) {
+        console.log("Error fetching user:", error);
+      }
+    };
     fetchUser();
-  }, []);
-
-  const fetchUser = async () => {
-    try {
-      const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
-      const data = await response.json();
-      setUser(data);
-    } catch (error) {
-      console.log("Error fetching user:", error);
-    }
-  };
+  }, [id]);
 
   if (!user) {
     return <div>Loading...</div>;
@@ -38,8 +39,8 @@ const UserId = () => {
           <p>Website: {user.website}</p>
           <p>Company: {user.company.name}</p>
           <p>
-            Address: {user.address.street}, {user.address.suite}, {user.address.city},{" "}
-            {user.address.zipcode}
+            Address: {user.address.street}, {user.address.suite},{" "}
+            {user.address.city}, {user.address.zipcode}
           </p>
         </div>
       </div>
@@ -48,5 +49,3 @@ const UserId = () => {
 };
 
 export default UserId;
-
-

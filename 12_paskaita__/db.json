@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "name": "Rokas",
+      "surname": "Andreikenas",
+      "date": "2000-11-11",
+      "email": "rokas@gmail.com",
+      "password": "rokas",
+      "id": 1
+    },
+    {
+      "name": "Tomas",
+      "surname": "Tomukas",
+      "date": "1999-12-12",
+      "email": "tomas@gmail.com",
+      "password": "tomas",
+      "id": 2
+    },
+    {
+      "name": "Kazys",
+      "surname": "Kazysas",
+      "date": "2000-12-12",
+      "email": "kazys@gmail.com",
+      "password": "kazys",
+      "id": 3
+    },
+    {
+      "name": "Bronius",
+      "surname": "Broniukas",
+      "date": "2000-12-12",
+      "email": "bronius@gmail.com",
+      "password": "bronius",
+      "id": 4
+    },
+    {
+      "name": "Kamile",
+      "surname": "Toleikyte",
+      "date": "1998-12-24",
+      "email": "toleikytkamil500@gmail.com",
+      "password": "Kamilesta",
+      "id": 5
+    }
+  ]
+}

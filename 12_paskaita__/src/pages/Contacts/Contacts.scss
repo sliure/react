@@ -1,0 +1,14 @@
+@import "../../styles/shadows.scss";
+
+.user-cards{
+    display: $cardDisplay;
+    flex-wrap: $cardDisplayWrap;
+    justify-content: $cardDisplayJustify;
+
+    .user-card{
+        box-shadow: $cardShadow;
+        width: 300px;
+        padding: 20px;
+        margin: 10px;
+    }
+}
