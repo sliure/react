@@ -1,0 +1,57 @@
+{
+  "users": [
+    {
+      "name": "Rokas",
+      "surname": "Andreikenas",
+      "date": "2000-11-11",
+      "email": "rokas@gmail.com",
+      "password": "rokas",
+      "id": 1
+    },
+    {
+      "name": "Tomas",
+      "surname": "Tomukas",
+      "date": "1999-12-12",
+      "email": "tomas@gmail.com",
+      "password": "tomas",
+      "id": 2
+    },
+    {
+      "name": "Kazys",
+      "surname": "Kazysas",
+      "date": "2000-12-12",
+      "email": "kazys@gmail.com",
+      "password": "kazys",
+      "id": 3
+    },
+    {
+      "name": "Bronius",
+      "surname": "Broniukas",
+      "date": "2000-12-12",
+      "email": "bronius@gmail.com",
+      "password": "bronius",
+      "id": 4
+    },
+    {
+      "name": "tokas",
+      "surname": "tokas",
+      "date": "2022-12-12",
+      "email": "tokas@gmail.com",
+      "password": "tokas",
+      "id": 5
+    }
+  ],
+  "projects": [
+    {
+      "id": 2,
+      "userId": 2,
+      "title": "Vilnius kazkas",
+      "description": "Reconstruction work of an administration building located at T. Ševčenkos Street 13, Vilnius, was performed. Main work: dismantling of floors, reinforced concrete structures, masonry walls, and openings. Demolition work of one part of the building, removal of construction scrap, and preparation of the territory for construction work.",
+      "imageUrl": "https://www.lrt.lt/img/2022/08/29/1331261-944016-756x425.jpg",
+      "client": "Merko statyba, UAB",
+      "startingDate": "2023-06-14",
+      "endingDate": "2024-06-14",
+      "people": []
+    }
+  ]
+}
