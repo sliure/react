@@ -1,25 +1,42 @@
+@import "../../styles/colors.scss";
+
 .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  background-color: black;
+  background-color: $topbarcolor;
   color: white;
 
   a {
     color: inherit;
+    background-color: $topbarcolor;
 
     &.user-container {
       color: inherit;
       display: flex;
       align-items: center;
       gap: 0.25rem;
+      background-color: $topbarcolor;
     }
+  }
+
+  svg{
+    background-color: $topbarcolor;
+  }
+
+  img{
+    width: 60px;
+    height: 20px;
   }
 
   &-items {
     display: flex;
     align-items: center;
     gap: 3rem;
+  }
+
+  div{
+    background-color: $topbarcolor;
   }
 }

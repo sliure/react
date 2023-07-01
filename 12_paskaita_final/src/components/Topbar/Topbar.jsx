@@ -11,7 +11,12 @@ const Topbar = () => {
 
   return (
     <nav className="navigation">
-      <div>Logo</div>
+      <div>
+        <img
+          src="https://us.123rf.com/450wm/barrazain/barrazain2003/barrazain200301284/143378312-uj-logo-letter-monogram-with-triangle-shape-design-template-isolated-on-black-background.jpg?ver=6"
+          alt=""
+        />
+      </div>
       <div className="navigation-items">
         {topbarNavigationItems.map((navItem) => (
           <Link to={navItem.route} key={navItem.title}>

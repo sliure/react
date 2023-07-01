@@ -17,3 +17,11 @@ export const updateUser = async (id, updatingUser) => {
   );
   return response.data;
 };
+
+export const createContact = async (newContact) => {
+  const response = await axios.post(
+    "http://localhost:3000/contacts",
+    newContact
+  );
+  return response.data;
+};

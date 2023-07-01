@@ -5,6 +5,8 @@ import { getProject } from "../../api/projects";
 import "./Project.scss";
 import ProjectGeneralInfo from "./ProjectGeneralInfo.jsx";
 import ProjectActions from "./ProjectActions";
+import { NEW_PROJECT_ROUTE } from "../../routes/const";
+import { Link } from "react-router-dom";
 
 const Project = () => {
   const { id } = useParams();

@@ -9,6 +9,7 @@ import Projects from "../pages/Projects/Projects";
 import NewProject from "../pages/NewProject/NewProject";
 import Project from "../pages/Project/Project";
 import EditProject from "../pages/EditProject/EditProject";
+import NewContact from "../pages/NewContact/NewContact";
 
 export const REGISTER_ROUTE = "/register";
 export const LOGIN_ROUTE = "/";
@@ -19,6 +20,7 @@ export const PROJECTS_ROUTE = "/projects";
 export const NEW_PROJECT_ROUTE = `${PROJECTS_ROUTE}/new`;
 export const PROJECT_ROUTE = `${PROJECTS_ROUTE}/:id`;
 export const EDIT_PROJECT_ROUTE = `${PROJECT_ROUTE}/edit`;
+export const NEW_CONTACT_ROUTE = `${CONTACTS_ROUTE}/new`;
 
 // kol neesu prisijnugęs
 export const loginRoutes = {
@@ -66,6 +68,10 @@ export const authenticatedRoutes = {
     {
       path: EDIT_PROJECT_ROUTE,
       Component: EditProject,
+    },
+    {
+      path: NEW_CONTACT_ROUTE,
+      Component: NewContact,
     },
   ],
 };

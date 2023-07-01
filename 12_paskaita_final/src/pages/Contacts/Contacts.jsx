@@ -1,17 +1,18 @@
+import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+import { UserContext } from "../../context/UserContext";
+import FormItem from "../../components/FormItem/FormItem";
+import Button from "../../components/Button/Button";
+import { NEW_CONTACT_ROUTE } from "../../routes/const";
+
 const Contacts = () => {
   return (
-    <div>
-      <main>
-        <h2>Contacts</h2>
-        <div>
-          <h3>Adress</h3>
-          <p>Adress</p>
-          <h3>Contacts</h3>
-          <p>Contacts</p>
-          <h3>Working hours</h3>
-          <p>Hours</p>
-        </div>
-      </main>
+    <div className="container">
+      <div className="new-project-container">
+        <Link to={NEW_CONTACT_ROUTE} className="new-project-button">
+          <Button>+ New Contact</Button>
+        </Link>
+      </div>
     </div>
   );
 };

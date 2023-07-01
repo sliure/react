@@ -39,6 +39,14 @@
       "email": "tokas@gmail.com",
       "password": "tokas",
       "id": 5
+    },
+    {
+      "name": "Kamile",
+      "surname": "Toleikyte",
+      "date": "1998-12-24",
+      "email": "toleikytkamil500@gmail.com",
+      "password": "Kamilesta",
+      "id": 6
     }
   ],
   "projects": [
@@ -53,5 +61,8 @@
       "endingDate": "2024-06-14",
       "people": []
     }
+  ],
+  "contacts":[
+    
   ]
 }

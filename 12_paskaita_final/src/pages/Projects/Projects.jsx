@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, generatePath } from "react-router-dom";
 import { getProjects } from "../../api/projects";
 import ProjectCard from "./ProjectCard";
-import { PROJECT_ROUTE } from "../../routes/const";
+import { PROJECT_ROUTE, NEW_PROJECT_ROUTE } from "../../routes/const";
+import Button from "../../components/Button/Button";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -32,15 +33,24 @@ const Projects = () => {
 
   return (
     <div className="projects">
-      {projects.map((project) => (
-        <Link
-          key={project.id}
-          to={generatePath(PROJECT_ROUTE, { id: project.id })} // generatePath tik tada kai naudojam dinaminius routus
-          className="single-project"
-        >
-          <ProjectCard title={project.title} imageUrl={project.imageUrl} />
+      <div className="new-project-container">
+        <Link to={NEW_PROJECT_ROUTE} className="new-project-button">
+          <Button>+ New Project</Button>
         </Link>
-      ))}
+      </div>
+      <div>
+        <div className="container">
+          {projects.map((project) => (
+            <Link
+              key={project.id}
+              to={generatePath(PROJECT_ROUTE, { id: project.id })}
+              className="single-project"
+            >
+              <ProjectCard title={project.title} imageUrl={project.imageUrl} />
+            </Link>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
